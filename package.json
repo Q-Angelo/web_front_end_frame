@@ -11,7 +11,8 @@
     "clear": "rimraf dist",
     "build": "npm run clear && npm run build:client && npm run build:server",
     "fix": "eslint --fix .",
-    "lint": "eslint --ext .js --ext .jsx client/"
+    "lint": "eslint --ext .js --ext .jsx client/",
+    "precommit": "npm run fix && npm run lint"
   },
   "repository": {
     "type": "git",
