@@ -1,13 +1,13 @@
 # 前端项目工程架构(React+Mobx+Webpack+NodeJs+Eslint)
 
 ## 目录
-- [WebApp架构简介](#webApp架构简介)
+- [Webapp架构简介](#webapp架构简介)
 - [技术选型](#技术选型)
 - [Webpack配置](#webpack配置)
-- [NodeJs服务端渲染](#nodeJs服务端渲染)
+- [Node.js服务端渲染](#node.js服务端渲染)
 - [Eslint代码规范](#eslint规范代码)
 
-## webApp架构简介
+## webapp架构简介
 
 #### 工程架构目标
 
@@ -157,7 +157,7 @@ module.exports = config
 我们在项目开发中编辑了代码，可以让我们在页面上无刷新的看到效果
 
 
-## nodeJs服务端渲染
+## node.js服务端渲染
 
 #### 导出需要在服务端渲染的内容
 
