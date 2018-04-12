@@ -15,11 +15,13 @@
         "semi": [0],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "jsx": true,
-        "indent": [
+        "react/jsx-indent": [
             "error",
             4, {
                 "SwitchCase": 1
             }
-        ]
+        ],
+        "import/no-unresolved": [0],
+        "import/extensions": [0]
     }
 }

@@ -5,14 +5,14 @@ import App from './App.jsx';
 
 const root = document.getElementById('root');
 const render = (Component) => {
-    ReactDom.hydrate(<AppContainer><Component /></AppContainer>, root);
+  ReactDom.hydrate(<AppContainer><Component /></AppContainer>, root);
 }
 
 render(App);
 
 if (module.hot) {
-    module.hot.accept('./App.jsx', () => {
+  module.hot.accept('./App.jsx', () => {
     const NextApp = require('./App.jsx').default; // eslint-disable-line
-        render(NextApp);
-    });
+    render(NextApp);
+  });
 }

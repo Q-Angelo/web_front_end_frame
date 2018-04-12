@@ -12,7 +12,7 @@ const config = {
     path: path.join(__dirname, '../dist'),
     publicPath: '/public/'
   },
-  extends: ['js', 'jsx'],
+  // extends: ['js', 'jsx'],
   module: {
     rules: [
       {
