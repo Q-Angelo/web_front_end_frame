@@ -4,7 +4,7 @@
 - [Webapp架构简介](#webapp架构简介)
 - [技术选型](#技术选型)
 - [Webpack配置](#webpack配置)
-- [Node.js服务端渲染](#node.js服务端渲染)
+- [Nodejs服务端渲染](#nodejs服务端渲染)
 - [Eslint代码规范](#eslint规范代码)
 
 ## webapp架构简介
@@ -157,7 +157,7 @@ module.exports = config
 我们在项目开发中编辑了代码，可以让我们在页面上无刷新的看到效果
 
 
-## node.js服务端渲染
+## nodejs服务端渲染
 
 #### 导出需要在服务端渲染的内容
 
