@@ -172,7 +172,7 @@ export default <App />
 
 #### 对导出需要在服务端渲染的内容进行webpack打包
 
-build目录下新建webpack.config.server.js文件
+build根目录下新建webpack.config.server.js文件
 
 ```js
 const path = require('path')
@@ -250,6 +250,38 @@ app.listen(3333, () => {
 ```
 
 #### NodeJs服务端测试环境渲染
+
+#### nodecommon实现服务端热启动
+
+安装插件 npm i nodemon -D
+
+根目录下创建nodemon.json配置文件
+
+```js
+{
+    "restartable": "rs", // 有这个命令nodemon重启服务才会使用这个配置
+    // 忽略某些文件的变化
+    "ignore": [
+        "build",
+        "client",
+        "node_modules/**/node_modules",
+        ".babelrc",
+        ".editorconfig",
+        ".eslintrc",
+        ".gitignore",
+        "package-lock.json",
+        "package.json",
+        "README.md"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js", // 哪些类型的文件变化后会启动
+    "verbose": true // 输出相信错误信息
+}
+```
+
+新建 server/util/dev-static.js
 
 ```js
 const axios = require('axios')

@@ -1,13 +1,13 @@
 {
-  "name": "react-cnode",
+  "name": "web_front_end_frame",
   "version": "1.0.0",
-  "description": "基于react、webpack实现cnode社区",
+  "description": "前端项目工程架构(React+Mobx+Webpack+NodeJs+Eslint)",
   "main": "index.js",
   "scripts": {
     "build:client": "webpack --config  build/webpack.config.client.js",
     "build:server": "webpack --config  build/webpack.config.server.js",
     "dev:client": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.client.js",
-    "dev:server": "cross-env NODE_ENV=development node ./server/app.js",
+    "dev:server": "nodemon ./server/app.js",
     "clear": "rimraf dist",
     "build": "npm run clear && npm run build:client && npm run build:server",
     "fix": "eslint --fix .",
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Q-Angelo/react-cnode.git"
+    "url": "git+https://github.com/Q-Angelo/web_front_end_frame.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Q-Angelo/react-cnode/issues"
+    "url": "https://github.com/Q-Angelo/web_front_end_frame/issues"
   },
-  "homepage": "https://github.com/Q-Angelo/react-cnode#readme",
+  "homepage": "https://github.com/Q-Angelo/web_front_end_frame#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
@@ -46,6 +46,7 @@
     "http-proxy-middleware": "^0.18.0",
     "husky": "^0.14.3",
     "memory-fs": "^0.4.1",
+    "nodemon": "^1.17.3",
     "react-hot-loader": "^4.0.0",
     "rimraf": "^2.6.2",
     "webpack": "^4.1.1",
@@ -56,6 +57,7 @@
     "axios": "^0.18.0",
     "express": "^4.16.3",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "serve-favicon": "^2.5.0"
   }
 }
