@@ -2,10 +2,25 @@
 
 ## 目录
 - [Webapp架构简介](#webapp架构简介)
+    - [工程架构目标](#工程架构目标)
+
 - [技术选型](#技术选型)
+
 - [Webpack配置](#webpack配置)
+    - [新建.babelrc文件](#新建.babelrc文件)
+    - [build目录下新建webpack.config.client.js](#build目录下新建webpack.config.client.js)
+    - [build目录下新建webpack.config.server.js](#build目录下新建webpack.config.server.js)
+
 - [Nodejs服务端渲染](#nodejs服务端渲染)
+    - [导出需要在服务端渲染的内容](#导出需要在服务端渲染的内容)
+    - [对导出需要在服务端渲染的内容进行webpack打包](#对导出需要在服务端渲染的内容进行webpack打包)
+    - [NodeJs服务端正式环境渲染](#nodejs服务端正式环境渲染)
+    - [NodeJs服务端测试环境渲染代码实现](#nodejs服务端测试环境渲染代码实现)
+    - [nodecommon实现服务端热启动](#nodecommon实现服务端热启动)
+
 - [Eslint代码规范](#eslint规范代码)
+
+- [编辑器代码规范.editorconfig](#编辑器代码规范editorconfig)
 
 ## webapp架构简介
 
@@ -60,7 +75,7 @@ presets代表babel现在所支持的语法
  }
 ```
 
-#### build目录下新建 webpack.config.client.js
+#### build目录下新建webpack.config.client.js
 
 安装插件
 
@@ -156,6 +171,9 @@ module.exports = config
 
 我们在项目开发中编辑了代码，可以让我们在页面上无刷新的看到效果
 
+#### build目录下新建webpack.config.server.js
+
+这块属于服务端渲染配置，在下面会有介绍 [对导出需要在服务端渲染的内容进行webpack打包](#对导出需要在服务端渲染的内容进行webpack打包)
 
 ## nodejs服务端渲染
 
@@ -215,7 +233,7 @@ module.exports = {
 
 ```
 
-#### 服务端渲染实现
+#### nodejs服务端正式环境渲染
 
 server目录下新建app.js
 
@@ -249,37 +267,7 @@ app.listen(3333, () => {
 });
 ```
 
-#### NodeJs服务端测试环境渲染
-
-#### nodecommon实现服务端热启动
-
-安装插件 npm i nodemon -D
-
-根目录下创建nodemon.json配置文件
-
-```js
-{
-    "restartable": "rs", // 有这个命令nodemon重启服务才会使用这个配置
-    // 忽略某些文件的变化
-    "ignore": [
-        "build",
-        "client",
-        "node_modules/**/node_modules",
-        ".babelrc",
-        ".editorconfig",
-        ".eslintrc",
-        ".gitignore",
-        "package-lock.json",
-        "package.json",
-        "README.md"
-    ],
-    "env": {
-        "NODE_ENV": "development"
-    },
-    "ext": "js", // 哪些类型的文件变化后会启动
-    "verbose": true // 输出相信错误信息
-}
-```
+#### nodejs服务端测试环境渲染代码实现
 
 新建 server/util/dev-static.js
 
@@ -360,6 +348,36 @@ module.exports = app => {
       res.send(template.replace('<!-- <app> -->', content))
     })
   })
+}
+```
+
+#### nodecommon实现服务端热启动
+
+安装插件 npm i nodemon -D
+
+根目录下创建nodemon.json配置文件
+
+```js
+{
+    "restartable": "rs", // 有这个命令nodemon重启服务才会使用这个配置
+    // 忽略某些文件的变化
+    "ignore": [
+        "build",
+        "client",
+        "node_modules/**/node_modules",
+        ".babelrc",
+        ".editorconfig",
+        ".eslintrc",
+        ".gitignore",
+        "package-lock.json",
+        "package.json",
+        "README.md"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "js", // 哪些类型的文件变化后会启动
+    "verbose": true // 输出相信错误信息
 }
 ```
 
@@ -460,7 +478,7 @@ npm i babel-eslint \
 ```
 
 
-## editorconfig
+## 编辑器代码规范editorconfig
 
 > 用来统一不同的编辑器对文本的格式进行规范
 
