@@ -1,7 +1,7 @@
 {
   "name": "web_front_end_frame",
   "version": "1.0.0",
-  "description": "前端项目工程架构(React+Mobx+Webpack+NodeJs+Eslint)",
+  "description": "前端项目工程架构(React+Webpack+NodeJs+Eslint)",
   "main": "index.js",
   "scripts": {
     "build:client": "webpack --config  build/webpack.config.client.js",

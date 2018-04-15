@@ -63,14 +63,25 @@
 
 ## 项目文件结构
 <pre>
-├── client                   业务代码目录
-  ├── build                  webpack编译文件
-  ├── components             定义Redux的各个action
-  ├── config                 配置目录
-    ├── app.js               应用入口
-    ├── app.jsx              声明整个页面上的一些内容
-  ├── views                  项目功能模块的页面
-  ├── store                  store相关的文件，包括数据获取的封装等。
+├── build                           webpack编译文件
+  ├── webpack.config.client.js      客户端打包配置文件
+  ├── webpack.config.server.js      服务端打包配置文件
+├── server                          服务端目录
+  ├── util                          放一些公共的文件
+    ├── dev-static.js               测试环境服务端渲染
+  ├── app.js                        入口文件
+├── client                          客户端目录
+  ├── components                    定义Redux的各个action
+  ├── config                        配置目录
+  ├── views                         项目功能模块的页面
+  ├── store                         store相关的文件，包括数据获取的封装等。
+  ├── app.js                        应用入口
+  ├── server-entry.js               服务端入口文件
+  ├── template.html                 声明整个页面上的一些内容
+├── .babelrc                        babelrc文件
+├── .editorconfig                   编辑器代码规范文件
+├── .eslintrc                       eslintrc代码规范文件
+├── nodemon.json                    nodejs热启动配置文件
 </pre>
 
 ## webpack配置
