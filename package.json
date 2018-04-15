@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Q-Angelo/web_front_end_frame.git"
+    "url": "git+https://github.com/Q-Angelo/react-cnode.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Q-Angelo/web_front_end_frame/issues"
+    "url": "https://github.com/Q-Angelo/react-cnode.git/issues"
   },
-  "homepage": "https://github.com/Q-Angelo/web_front_end_frame#readme",
+  "homepage": "https://github.com/Q-Angelo/react-cnode#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
