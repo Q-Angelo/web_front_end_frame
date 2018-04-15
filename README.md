@@ -7,6 +7,8 @@
 
 - [技术选型](#技术选型)
 
+- [项目文件结构](#项目文件结构)
+
 - [Webpack配置](#webpack配置)
     - [新建.babelrc文件](#新建.babelrc文件)
     - [build目录下新建webpack.config.client.js](#build目录下新建webpack.config.client.js)
