@@ -1,4 +1,4 @@
-# 前端项目工程架构(React+Mobx+Webpack+NodeJs+Eslint)
+# 前端项目工程架构
 
 ## 目录
 - [Webapp架构简介](#webapp架构简介)
@@ -21,6 +21,24 @@
 - [Eslint代码规范](#eslint规范代码)
 
 - [编辑器代码规范.editorconfig](#编辑器代码规范editorconfig)
+
+## 实例演示
+
+#### 技术栈
+
+> React+Mobx+Webpack+NodeJs+Eslint
+
+#### 下载
+
+> git clone git@github.com:Q-Angelo/web_front_end_frame.git
+> cd web_front_end_frame
+> npm i
+
+#### 运行
+
+> npm run dev:client 开启测试环境 客户端代码
+> npm run dev:server 开始测试环境 服务端代码
+> npm run build 开启正式环境
 
 ## webapp架构简介
 
