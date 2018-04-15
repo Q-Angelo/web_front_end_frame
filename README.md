@@ -32,14 +32,14 @@
 #### 下载
 
 > git clone git@github.com:Q-Angelo/web_front_end_frame.git
-> cd web_front_end_frame
-> npm i
+cd web_front_end_frame
+npm i
 
 #### 运行
 
 > npm run dev:client 开启测试环境 客户端代码
-> npm run dev:server 开始测试环境 服务端代码
-> npm run build 开启正式环境
+npm run dev:server 开始测试环境 服务端代码
+npm run build 开启正式环境
 
 ## webapp架构简介
 
